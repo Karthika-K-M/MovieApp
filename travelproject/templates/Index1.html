@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        {%for i in mobile_list %}
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img alt="Card image cap" class="card-img-top" height="350px" src="{{i.img.url}}" width="300px">
+                <div class="card-body">
+                    <h5 class="card-title">{{i.name}}</h5>
+                    <p class="card-text">{{i.desc}}</p>
+                    <a class="btn btn-primary" href="{%url 'travelapp:details' i.id %}">Click here for more details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

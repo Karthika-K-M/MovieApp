@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{%block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img height="500" src="{{mobile.img.url}}" width="450">
+        </div>
+        <div class="col-md-6">
+            <h2>{{mobile.name}}</h2>
+            <h4>{{mobile.desc}}</h4>
+            <h4>{{mobile.year}}</h4>
+            <a class="btn btn-warning" href="{% url 'travelapp:edit_mobile' mobile.id %}">Edit the Form</a>
+            <a class="btn btn-danger" href="{% url 'travelapp:delete' mobile.id %}">Delete the entry</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
